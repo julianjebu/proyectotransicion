@@ -1,0 +1,994 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    background: #d9d9d9;
+    transition: background-color 0.8s ease;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+
+  .header {
+    width: 90%;
+    max-width: 2000px;
+    margin: 40px auto 0 auto;
+    background: #fff;
+    padding: 30px 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+  }
+
+
+  .header__titulo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0d0e26;
+    margin-right: px;
+  }
+  .header__menu {
+    display: flex;
+    gap: 40px;
+  }
+  @media (max-width: 1100px) {
+    .header__menu {
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .header {
+      display: flex;
+      flex-direction: column;
+    }
+    .header__menu {
+      margin-top: 20px;
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .header {
+      padding: 20px 30px;
+    }
+    .header__titulo {
+      font-size: 26px;
+    }
+    .header__menu a:nth-child(2) {
+      visibility: hidden; /* Oculta el texto original */
+      position: relative;
+    }
+
+
+    .header__menu {
+      font-size: 14px;
+    }
+    .header__menu a:nth-child(2)::after {
+      content: "Consumo";
+      visibility: visible;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: black; /* Ajusta el color del texto según sea necesario */
+      text-align: center;
+    }
+  }
+
+  .header__link {
+    font-weight: 600;
+    color: #000;
+  }
+  .header__link:hover {
+    color: #255ecd;
+  }
+
+
+
+  .hero__header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+/*--------------------------*/
+  .hero {
+    background-color: #fff;
+    width: 90%;
+    max-width: 2000px;
+    margin: auto;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 55% 45%;
+  }
+  .hero__info {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 65px;
+  }
+
+  #contenedor__titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+
+  .hero__titulo {
+    font-size: 34px;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+  }
+  .hero__subtitulo {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0;
+    color: #255ecd;
+  }
+  .hero__cursor {
+    display: none;
+    height: 34px;
+    width: 34px;
+    color: #8b8b8b;
+    position: absolute;
+    top: 4px;
+    right: -30px;
+  }
+  .hero__cursor--visible {
+    display: block;
+  }
+  .hero__cursor--active {
+    animation: cursor 0.8s linear 0s infinite alternate;
+  }
+  @keyframes cursor {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .hero__cursor-icono {
+    height: 100%;
+    width: 100%;
+  }
+
+  #contenedor__imagenp {
+    background-image: url("../img/textil.jpg");
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+  }
+
+  /* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+  /*#contenedor__imagenp {
+    display:none;
+  }*/
+
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding-bottom: 0;
+    margin-bottom: -40;
+  }
+
+  .hero__titulo {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+
+  .hero__subtitulo, .hero__parrafo {
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: justify;
+    padding-top: 10px;
+  }
+
+  #contenedor__titulo {
+    padding: 0 30px;
+    margin-top: 0;
+  }
+
+
+}
+  /*--------------------------*/
+
+  #nav__energias {
+    background: #0d0e26;
+    padding: 20px 65px;
+    width: 90%;
+    max-width: 2000px;
+    margin: auto;
+  }
+  
+  #titulo__nav {
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .nav__imagenes {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s, opacity 0.5s ease;
+  }
+  
+  .nav__imagenes:hover {
+    transform: scale(1.05);
+    opacity: 0.5;
+  }
+  
+  .nav__texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2vw;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  #contenedor__nav__energias a {
+    position: relative;
+  }
+  
+  #contenedor__nav__energias a:hover .nav__texto {
+    opacity: 1;
+  }
+
+  #contenedor__nav__energias {
+    margin: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr; /* La primera columna es más ancha */
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    padding-bottom: 50px;
+    grid-template-areas:
+      "biomasa solar eolica"
+      "biomasa hidroelectrica geotermica";
+  }
+  
+  #contenedor__nav__energias a:nth-child(1) {
+    grid-area: biomasa;
+  }
+  
+  #contenedor__nav__energias a:nth-child(2) {
+    grid-area: solar;
+  }
+  
+  #contenedor__nav__energias a:nth-child(3) {
+    grid-area: eolica;
+  }
+  
+  #contenedor__nav__energias a:nth-child(4) {
+    grid-area: hidroelectrica;
+  }
+  
+  #contenedor__nav__energias a:nth-child(5) {
+    grid-area: geotermica;
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media (max-width: 600px) {
+    #nav__energias {
+      padding: 20px 30px;
+    }
+  
+    #contenedor__nav__energias {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-areas:
+        "biomasa"
+        "solar"
+        "eolica"
+        "hidroelectrica"
+        "geotermica";
+    }
+  
+    #contenedor__nav__energias a {
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%; /* Esto hace que la altura sea igual al ancho, creando un cuadrado */
+      position: relative;
+    }
+  
+    .nav__imagenes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s;
+      opacity: 0.8;
+    }
+  
+    .nav__texto {
+      opacity: 1;
+      font-size: 1.5rem; /* Ajusta el tamaño del texto para pantallas pequeñas */
+    }
+  }
+  /*--------------------------*/
+  .comentarios {
+    background: #f1f1f1;
+    padding: 40px 65px;
+    width: 90%;
+    max-width: 2000px;
+    margin: auto;
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+  }
+  .comentarios__header {
+    margin-bottom: 40px;
+  }
+  .comentarios__titulo {
+    margin-bottom: 10px;
+  }
+  .comentarios__slider {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+    gap: 20px;
+    overflow-x: auto;
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    user-select: none;
+  }
+
+  .comentarios__review {
+    min-width: 400px;
+    padding-bottom: 10px;
+    position: relative;
+  }
+  .comentarios__contenedor-foto {
+    position: relative;
+    top: 40px;
+    margin-top: -40px;
+  }
+  .comentarios__contenedor-textos {
+    background: #fff;
+    padding: 60px 20px 20px 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .comentarios__foto {
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+  }
+  .comentarios__texto {
+    font-size: 14px;
+    color: #6f6f6f;
+    margin-bottom: 20px;
+  }
+  .comentarios__autor {
+    color: #255ecd;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .comentarios__empresa {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .footer {
+    width: 90%;
+    max-width: 2000px;
+    margin: auto;
+    text-align: center;
+    padding: 40px 0px;
+  }
+
+  @media (max-width: 600px) {
+    .comentarios {
+      padding: 40px 50px;
+    }
+    .comentarios__slider {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      overflow-x: visible;
+      cursor: default;
+    }
+  
+    .comentarios__review {
+      min-width: auto;
+    }
+  }
+
+  .comentarios__review {
+    margin-top: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .comentarios__review:hover {
+    transform: scale(1.05);
+  }
+
+  /*--------------------------*/
+
+  .header__energia {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px 65px;
+    width: 90%;
+    max-width: 2000px;
+    margin: auto;
+  }
+
+  .header__solar {
+    background-image: url("../img/energia_solar.jpg");
+  }
+  
+  .header__eolica {
+    background-image: url("../img/energia_eolica2.jpg");
+  }
+
+  .header__hidroelectrica {
+    background-image: url("../img/energia_hidroelectrica3.jpg");
+  }
+
+  .header__biomasa {
+    background-image: url("../img/energia_biomasa2.jpg");  
+  }
+
+  .header__geotermica {
+    background-image: url("../img/energia_geotermica.jpg");
+  }
+
+  .energia {
+    background: #f1f1f1;
+    padding: 40px 65px;
+    width: 90%;
+    max-width: 2000px;
+    margin: auto;
+  }
+
+  @media (max-width: 600px) {
+    .energia {
+      padding: 40px 30px;
+    }
+    
+    .header__energia {
+      padding: 5px 30px;
+    }
+  }
+
+  .energia__contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .descripcion__energia {
+    text-align: left;
+    margin-right: 30px;
+  }
+
+  .video__contenido {
+    width: 100%;
+  }
+  
+  .video__energia {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .video__energia iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .video__contenido ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .video__contenido li {
+    margin-bottom: 10px;
+  }
+
+  .cajas__descripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .titulo__energias {
+    padding: 20px 0px;
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  @media (max-width: 900px) {
+    .energia__contenido {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .descripcion__energia {
+      margin-right: 0;
+    }
+  }
+/* -------------el css que compartio el men*/
+
+  #titulo__formulario {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 35px;
+  }
+
+  #Calculo{
+  background: #0d0e26;
+  width: 90%;
+  max-width: 2000px;
+  margin: auto;
+  padding: 40px 65px;
+
+  }
+
+  #Calculo p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
+
+h1, h2 {
+  /* Estilos para encabezados de nivel 1 y 2 */
+  margin: 0.5rem 0;
+  /* Define un margen vertical de 0.5 rem y elimina márgenes horizontales */
+}
+
+#formulario, #lista-consumo, #resultados ,#ConsumoPaneles {
+  /* Estilos compartidos por las secciones identificadas por estos IDs */
+  
+  margin: auto;
+
+  width: 70%;
+
+  margin-bottom: 2rem;
+  /* Agrega un margen inferior de 2 rem */
+  padding: 1rem;
+  /* Aplica un relleno de 1 rem en todos los lados */
+
+  border: 1px solid #ccc;
+  /* Agrega un borde de 1 px con un color gris claro */
+  border-radius: 8px;
+  /* Redondea las esquinas del borde con un radio de 8 px */
+  background-color: #fff;
+  /* Define el color de fondo como blanco */
+}
+
+
+#formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  gap: 20px; /* Espacio entre las columnas */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: auto;
+  width: 70%;
+  margin-bottom: 2rem;
+}
+
+#formulario .formulario__form {
+  padding: 1rem;
+}
+
+#formulario .formulario__imagen {
+  background-image: url("../img/imagenformulario.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+@media (max-width: 900px) {
+  #formulario {
+    display: block; /* Cambia a bloque en pantallas pequeñas */
+  }
+
+  #formulario .formulario__imagen {
+    display: none; /* Oculta la imagen en pantallas pequeñas */
+  }
+}
+
+
+
+
+
+
+#ConsumoPaneles {
+  padding-bottom: 0;
+}
+
+#ConsumoPaneles label {
+  margin-top: 30px;
+}
+@media (max-width: 600px) {
+  /* Estilos para pantallas con un ancho máximo de 600 px */
+  #formulario, #lista-consumo, #resultados, #ConsumoPaneles {
+    /* Aplica un ancho del 90% en lugar del 70% */
+    width: 100%;
+  }
+
+  #Calculo{
+    padding: 40px 30px;
+  }
+
+  #Calculo p {
+    font-size: 16px;
+    width: 100%;
+    text-align: justify;
+  }
+
+  #titulo__formulario {
+    font-size: 25px;
+  }
+}
+
+label, select, input, button {
+  /* Estilos aplicados a etiquetas, menús desplegables, campos de entrada y botones */
+  display: block;
+  /* Cambia la visualización a bloque para que cada elemento ocupe una línea */
+  margin: 0.5rem 0;
+  /* Aplica un margen vertical de 0.5 rem */
+}
+
+button {
+  /* Estilos para botones */
+  padding: 0.5rem 1rem;
+  /* Agrega un relleno de 0.5 rem arriba/abajo y 1 rem a los lados */
+  background-color: #0066cc;
+  /* Define el color de fondo del botón como azul */
+  color: white;
+  /* Define el color del texto como blanco */
+  border: none;
+  /* Elimina el borde predeterminado */
+  border-radius: 4px;
+  /* Redondea las esquinas del botón */
+  cursor: pointer;
+  /* Cambia el cursor a puntero al pasar sobre el botón */
+}
+
+button:hover {
+  /* Estilos cuando el cursor pasa sobre un botón */
+  background-color: #004c99;
+  /* Cambia el color de fondo a un azul más oscuro */
+}
+
+canvas {
+  /* Estilos para elementos de lienzo (gráficos) */
+  max-width: 100%;
+  /* Limita el ancho máximo al 100% del contenedor */
+  margin: 2rem 0;
+  /* Agrega márgenes verticales de 2 rem */
+}
+
+ul {
+  /* Estilos para listas desordenadas */
+  list-style: none;
+  /* Elimina los indicadores predeterminados de la lista */
+  padding: 0;
+  /* Elimina el relleno predeterminado */
+}
+
+li {
+  /* Estilos para los elementos de lista */
+  margin: 0.5rem 0;
+  /* Agrega un margen vertical de 0.5 rem */
+  border-bottom: 1px solid #ddd;
+  /* Agrega una línea divisoria gris claro en la parte inferior */
+  padding-bottom: 0.5rem;
+  /* Agrega un relleno inferior de 0.5 rem */
+}
+
+
+  /*--------------------------*/
+.footer__subtitulo {
+  margin-top: 10px;
+}
+
+.footer__redes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.social-login-icons {
+  display: flex;
+  align-items: center;
+}
+.social-login-icons svg {
+  width: 40px;
+}
+
+.social-icon-1,
+.social-icon-2,
+.social-icon-3,
+.social-icon-4 {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialcontainer {
+  height: 50px;
+  overflow: hidden;
+}
+.social-icon-1 {
+  transition-duration: 0.4s;
+  background-color: rgb(0, 0, 0);
+}
+.socialcontainer:hover .social-icon-1 {
+  transform: translateY(-50px);
+}
+.social-icon-2 {
+  transition-duration: 0.4s;
+  background: linear-gradient(
+    72.44deg,
+    #ff7a00 11.92%,
+    #ff0169 51.56%,
+    #d300c5 85.69%
+  );
+}
+.socialcontainer:hover .social-icon-2 {
+  transform: translateY(-50px);
+}
+.social-icon-3 {
+  transition-duration: 0.4s;
+  background: #316ff6;
+}
+
+.socialcontainer:hover .social-icon-3 {
+  transform: translateY(-50px);
+}
+.social-icon-4 {
+  transition-duration: 0.4s;
+  background: linear-gradient(
+    180deg,
+    rgba(129, 34, 144, 1) 0%,
+    rgba(77, 34, 124, 1) 91%
+  );
+}
+
+.socialcontainer:hover .social-icon-4 {
+  transform: translateY(-50px);
+}
+
+
+
+/*--------------------------*/
+
+  .ventana {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+  }
+  .ventana--active {
+    display: block;
+  }
+  .ventana__overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ventana__correo {
+    width: 90%;
+    max-width: 600px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    position: relative;
+  }
+  .ventana__btn-cerrar {
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+  }
+  .ventana__icono-cerrar {
+    width: 100%;
+    height: 100%;
+  }
+  .ventana__titulo {
+    font-size: 24px;
+  }
+  .ventana__imagen-correo {
+    width: 300px;
+  }
+  .ventana__hint {
+    font-size: 16px;
+    color: #8c8c8c;
+  }
+  .ventana__body {
+    background: #fff;
+    padding: 5px;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 20px;
+    position: relative;
+  }
+  .ventana__imagen {
+    width: 100%;
+    border-radius: 5px;
+    vertical-align: top;
+  }
+  .ventana__fecha {
+    font-size: 14px;
+    color: #8c8c8c;
+  }
+  .ventana__parrafo {
+    line-height: 24px;
+  }
+  .ventana__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  } /*# sourceMappingURL=bundle.css.map */
+  
+  #cookies {
+    background-color: #333;
+    display:none;
+    position:fixed;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    padding-bottom:60px;
+    width:100%;
+    text-align:center;
+    min-height:40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color:#fff;
+    z-index:99999;
+}
+
+.inner {
+    width:100%;
+    position:absolute;
+    padding-left:5px;
+    font-family:verdana;
+    font-size:12px;
+    top:30%;
+}
+
+b{
+  padding:4px;
+  color:#00ff2e;
+  text-decoration:none;
+}
+.inner a.info {padding-left:5px;text-decoration:none;color:#faff00;}
+
+
+.button__up {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(252, 252, 252);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(195, 194, 194, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: black;
+}
+
+.button__up:hover {
+  background-color: white;
+  transition-duration: 0.3s;
+  align-items: center;
+
+}
+
+.button__up:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.button__up {
+  position: fixed;
+  bottom: 1px; /* Ajusta la distancia desde la parte inferior de la pantalla */
+  right: 6px; /* Ajusta la distancia desde la parte derecha de la pantalla */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+  transition: opacity 0.3s ease; /* Transición suave para la opacidad */
+}
+
+@media (max-width: 600px) {
+  .button__up {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 10px; /* Ajusta la distancia desde la parte inferior de la pantalla */
+    right: 4px; /* Ajusta la distancia desde la parte derecha de la pantalla */
+  }
+}

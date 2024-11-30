@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			
+		/>
+		<link rel="stylesheet" href="./public/styles.css" />
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<script src="./src/index.js" type="module" defer></script>
+		<link rel="icon" href="img/icons8-fuentes-de-energia-externas-energias-renovables-flaticones-planos-iconos-planos-64.png" type="image/png" />
+		<title>Transición Energetica</title>
+	</head>
+	
+	<body>
+		<header class="header">
+			<h1 class="header__titulo" href="#">Transición energética</h1>
+			<nav class="header__menu">
+				<a href='#header__solar' class="header__link">Energias</a>
+				<a href="#Calculo" class="header__link">Calcula tu consumo</a>
+				<a href="#ejemplo1" class="header__link">Asesórate</a>
+			</nav>
+		</header>
+		<section class="hero" id="hero">
+			<div id="contenedor__titulo">
+				<div class="hero__titulo hero__titulo--uno" data-texto="Transforma tu Industria Textil">
+					<div class="hero__cursor hero__cursor--visible hero__cursor--active" id="cursor">
+						
+					</div>
+				</div>
+
+				<h3 class="hero__subtitulo">¿Listo para reducir costos y liderar el cambio hacia un futuro más sostenible?</h3>
+				<p class="hero__parrafo">Conozca el impacto de las energías renovables en Colombia y calcule su ahorro energético para la industria textil.</p>
+			</div>
+			<div id="contenedor__imagenp"></div>
+
+		</section>
+
+		<section id="nav__energias">
+			<h2 id="titulo__nav">Energías Renovables mas utilizadas en Colombia</h2>
+			<div id="contenedor__nav__energias">
+				<a href="#header__biomasa">
+					<img class="nav__imagenes" src="img/nav_biomasa.jpeg" alt="Energia de Biomasa">
+				<div class="nav__texto">Biomasa</div>
+				</a>
+				<a href="#header__solar">
+					<img class="nav__imagenes" src="img/nav_solar.jpeg" alt="Energia solar">
+				<div class="nav__texto">Solar</div>
+				</a>
+				<a href="#header__eolica">
+					<img class="nav__imagenes" src="img/nav_eolica.webp" alt="Energia Eolica">
+				<div class="nav__texto">Eólica</div>
+				</a>
+				<a href="#header__hidroelectrica">
+					<img class="nav__imagenes" src="img/nav_hidroelectrica.jpeg" alt="Energia Hidroelectrica">
+				<div class="nav__texto">Hidroeléctrica</div>
+				</a>
+				<a href="#header__geotermica">
+					<img class="nav__imagenes" src="img/nav_geotermica.jpeg" alt="Energia Geotermica">
+				<div class="nav__texto">Geotérmica</div>
+				</a>
+			</div>
+		</section>
+
+	<!--Descripcion de cada enegia-->
+	<div class="header__energia header__solar" id="header__solar">
+		<h2 class="titulo__energias">Energía Solar</h2>
+	</div>
+	<section class="energia" id="solar_color">
+		<div class="energia__contenido">
+			<div class="descripcion__energia">
+				<div class="cajas__descripcion">
+					<h3>Descripción</h3>
+					<p>La energía solar aprovecha la radiación del sol mediante paneles fotovoltaicos para generar electricidad o colectores solares para calentar agua y producir vapor. Gracias a su ubicación cerca del ecuador, Colombia cuenta con altos niveles de radiación solar durante todo el año, haciendo esta fuente viable y eficiente.</p>
+				</div>
+				<div class="cajas__descripcion">
+					<h3>Propósito</h3>
+					<p>Diversificar las fuentes de energía y reducir la dependencia de combustibles fósiles. También ofrece una alternativa sostenible y rentable para empresas que buscan mejorar su impacto ambiental.</p>
+				</div>
+				<div class="cajas__descripcion">
+					<h3>Aplicaciones</h3>
+					<p><strong>Energía eléctrica:</strong> Paneles solares abastecen oficinas y hogares.</p>
+					<p><strong>Calentamiento de agua:</strong> Útil en procesos industriales y residenciales.</p>
+					<p><strong>Reducción de consumo:</strong> Disminuye la dependencia de redes eléctricas tradicionales.</p>
+				</div>
+			</div>
+	
+			<div class="video__contenido">
+				<div class="video__energia">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/HqA0-I5bqVU?si=qCdFx-6GIVwwnmTV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+	
+				<h3>Beneficios</h3>
+				<ul>
+					<li><strong>Abundancia:</strong> Colombia tiene una ubicación privilegiada para aprovechar la energía solar.</li>
+					<li><strong>Bajo mantenimiento:</strong> Una vez instalados, los sistemas solares requieren poco mantenimiento.</li>
+					<li><strong>Independencia energética:</strong> Reduce la dependencia de redes eléctricas tradicionales, beneficiando a empresas y hogares.</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	
+
+
+		<div class="header__energia header__eolica" id="header__eolica">
+			<h2 class="titulo__energias">Energía Eólica</h2>
+		</div>
+		<section class="energia" id="eolica_color">
+			<div class="energia__contenido">
+				<div class="descripcion__energia">
+					<div class="cajas__descripcion">
+						<h3>Descripción</h3>
+						<p>La energía eólica utiliza el viento para generar electricidad a través de aerogeneradores. En regiones como La Guajira, con vientos constantes y fuertes, Colombia tiene un alto potencial para su desarrollo. Las turbinas convierten la energía cinética del aire en electricidad limpia y renovable.</p>
+					</div>
+					<div class="cajas__descripcion">
+						<h3>Propósito</h3>
+						<p>Diversificar las fuentes energéticas de Colombia, reducir la dependencia de combustibles fósiles y minimizar emisiones de gases de efecto invernadero. También fortalece la autonomía energética en zonas rurales y de difícil acceso.</p>
+					</div>
+					<div class="cajas__descripcion">
+						<h3>Aplicaciones</h3>
+						<p><strong>Generación eléctrica industrial:</strong> Energía confiable para fábricas y centros logísticos.</p>
+						<p><strong>Suministro rural:</strong> Turbinas pequeñas para comunidades remotas.</p>
+						<p><strong>Sistemas híbridos:</strong> Combina energía solar y eólica para un suministro continuo.</p>
+					</div>
+				</div>
+		
+				<div class="video__contenido">
+					<div class="video__energia">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/rQ-3hSdJI-0?si=CMbun3aqStE5Tbdm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+		
+					<h3>Beneficios</h3>
+					<ul>
+						<li><strong>Energía sostenible:</strong> 100% renovable y sin emisiones directas.</li>
+						<li><strong>Disponibilidad:</strong> Recursos constantes en regiones favorables.</li>
+						<li><strong>Ahorro a largo plazo:</strong> Bajos costos operativos tras la instalación.</li>
+						<li><strong>Impacto social:</strong> Generación de empleo en áreas rurales.</li>
+						<li><strong>Escalabilidad:</strong> Fácil adaptación a necesidades energéticas crecientes.</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+
+
+		<div class="header__energia header__hidroelectrica" id="header__hidroelectrica">
+			<h2 class="titulo__energias">Energía Hidroeléctrica</h2>
+		</div>
+		<section class="energia" id="hidroelectrica_color">
+			<div class="energia__contenido">
+				<div class="descripcion__energia">
+					<div class="cajas__descripcion">
+						<h3>Descripción</h3>
+						<p>La energía hidroeléctrica utiliza la fuerza del agua en movimiento, como ríos o corrientes, para generar electricidad mediante turbinas conectadas a generadores. Es una fuente renovable clave para la generación de energía limpia y sostenible a nivel mundial.</p>
+					</div>
+					<div class="cajas__descripcion">
+						<h3>Propósito</h3>
+						<p>Aprovechar los recursos hídricos para reducir la dependencia de combustibles fósiles, garantizar un suministro energético continuo y confiable, y contribuir a la sostenibilidad ambiental. En Colombia, su riqueza hídrica la convierte en una solución estratégica.</p>
+					</div>
+					<div class="cajas__descripcion">
+						<h3>Aplicaciones</h3>
+						<p><strong>Generación a gran escala:</strong> Centrales hidroeléctricas que abastecen redes nacionales.</p>
+						<p><strong>Microcentrales:</strong> Proyectos pequeños para comunidades rurales o zonas remotas.</p>
+						<p><strong>Sistemas de bombeo:</strong> Almacenamiento de agua para gestión eficiente de la demanda energética.</p>
+					</div>
+				</div>
+		
+				<div class="video__contenido">
+					<div class="video__energia">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/Z34TbQB79jE?si=ZEZ1m2bVxao_iD6A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+		
+					<h3>Beneficios</h3>
+					<ul>
+						<li><strong>Baja emisión de gases:</strong> Contribuye a mitigar el cambio climático.</li>
+						<li><strong>Fiabilidad:</strong> Proporciona energía constante y adaptable a las demandas eléctricas.</li>
+						<li><strong>Vida útil prolongada:</strong> Las plantas hidroeléctricas son sostenibles a largo plazo.</li>
+						<li><strong>Impacto económico:</strong> Genera empleo y promueve el desarrollo local en áreas rurales.</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+
+
+		<div class="header__energia header__biomasa" id="header__biomasa">
+			<h2 class="titulo__energias">Energía de Biomasa</h2>
+		</div>
+		<section class="energia" id="biomasa_color">
+			<div class="energia__contenido">
+				<div class="descripcion__energia">
+					<div class="cajas__descripcion">
+						<h3>Descripción</h3>
+						<p>La energía de biomasa es renovable y se obtiene de materia orgánica de origen vegetal, animal o residuos industriales y agrícolas. Este recurso se transforma en calor, electricidad o biocombustibles mediante procesos como combustión, fermentación o gasificación.</p>
+					</div>
+					<div class="cajas__descripcion">
+						<h3>Propósito</h3>
+						<p>Transformar residuos orgánicos y biodegradables en energía útil para reducir la dependencia de combustibles fósiles, disminuir desechos acumulados y contribuir a la mitigación del cambio climático. Además, fomenta el aprovechamiento de recursos locales y un modelo energético sostenible.</p>
+					</div>
+					<div class="cajas__descripcion">
+						<h3>Aplicaciones</h3>
+						<p><strong>Generación de calor y electricidad:</strong> Calderas y plantas de biomasa producen energía térmica y eléctrica.</p>
+						<p><strong>Biocombustibles:</strong> Conversión de biomasa en etanol, biodiésel o biogás para transporte o generación eléctrica.</p>
+						<p><strong>Uso doméstico y agrícola:</strong> Cocción, calefacción en comunidades rurales y fertilización con subproductos orgánicos.</p>
+						<p><strong>Procesos industriales:</strong> Energía térmica para fábricas de alimentos, papel y textiles.</p>
+					</div>
+				</div>
+		
+				<div class="video__contenido">
+					<div class="video__energia">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/s6OjgzC8IBQ?si=oEpZ-W3Nf0PO94gf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+		
+					<h3>Beneficios</h3>
+					<ul>
+						<li><strong>Eficiencia en manejo de residuos:</strong> Reduce el volumen de desechos orgánicos acumulados.</li>
+						<li><strong>Reducción de emisiones:</strong> Sustituye combustibles fósiles, disminuyendo gases de efecto invernadero.</li>
+						<li><strong>Sostenibilidad económica:</strong> Genera empleos y desarrollo rural en comunidades agrícolas.</li>
+						<li><strong>Disponibilidad local:</strong> Aprovecha residuos agrícolas y forestales en Colombia.</li>
+						<li><strong>Adaptabilidad:</strong> Desde pequeños sistemas domésticos hasta grandes instalaciones industriales.</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+
+
+		<div class="header__energia header__geotermica" id="header__geotermica">
+			<h2 class="titulo__energias">Energía Geotérmica</h2>
+		</div>
+		<section class="energia" id="geotermica_color">
+			<div class="energia__contenido">
+				<div class="descripcion__energia">
+					<div class="cajas__descripcion">
+						<h3>Descripción</h3>
+						<p>La energía geotérmica es una fuente renovable que utiliza el calor interno de la Tierra, originado en el núcleo y en la descomposición de materiales radiactivos del manto. Este calor se extrae mediante perforaciones que acceden a depósitos subterráneos de agua caliente o vapor, aprovechados para generar electricidad o calor directo.</p>
+					</div>
+					<div class="cajas__descripcion">
+						<h3>Propósito</h3>
+						<p>Proveer una fuente de energía limpia, constante y confiable. La energía geotérmica ayuda a reducir la dependencia de combustibles fósiles, apoya la transición a sistemas energéticos sostenibles y diversifica las opciones renovables en regiones con potencial geotérmico.</p>
+					</div>
+					<div class="cajas__descripcion">
+						<h3>Aplicaciones</h3>
+						<p><strong>Generación eléctrica:</strong> Transformación de vapor o agua caliente en electricidad mediante plantas geotérmicas.</p>
+						<p><strong>Calefacción directa:</strong> Uso de calor para hogares, invernaderos, procesos industriales y baños termales.</p>
+						<p><strong>Climatización de edificios:</strong> Bombas de calor geotérmicas para calefacción y enfriamiento eficiente.</p>
+						<p><strong>Desalinización:</strong> Utilización del calor geotérmico para procesos de desalinización de agua.</p>
+					</div>
+				</div>
+		
+				<div class="video__contenido">
+					<div class="video__energia">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/SFf6k4OTslc?si=9LyOcOeaeb8_pLLP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+		
+					<h3>Beneficios</h3>
+					<ul>
+						<li><strong>Energía constante:</strong> No depende del clima, como el sol o el viento.</li>
+						<li><strong>Bajas emisiones:</strong> Impacto ambiental reducido frente a combustibles fósiles.</li>
+						<li><strong>Larga vida útil:</strong> Yacimientos bien gestionados pueden durar décadas.</li>
+						<li><strong>Desarrollo local:</strong> Fomenta empleo y proyectos sostenibles en áreas rurales con recursos geotérmicos.</li>
+						<li><strong>Ahorro energético:</strong> Reduce el consumo de electricidad convencional en aplicaciones como climatización.</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+		
+		<section id="Calculo">
+
+			<h2 id="titulo__formulario">Ahorra con Energía Solar!</h2>
+			<p>Descubre cuánto puedes ahorrar al año implementando paneles solares en tu empresa textil. Ingresa los datos de tus maquinarias y compara el consumo actual con los beneficios de una transición hacia fuentes de energía limpia y sostenible. ¡Dale un impulso verde a tu industria!</p>
+
+			<section id="formulario">
+				<!-- Sección de la página para el formulario. Tiene un atributo "id" único llamado "formulario". -->
+	
+				<div class="formulario__form">
+					<h2>Agregar Máquinaria Textil</h2>
+					<!-- Encabezado de nivel 2 que introduce esta sección. -->
+		
+					<label for="electrodomestico">Máquina:</label>
+					<!-- Etiqueta que describe el propósito del siguiente elemento (el selector). 
+					"for" asocia la etiqueta con el elemento cuyo "id" coincide. -->
+		
+					<select id="electrodomestico">
+						<!-- Menú desplegable que permite seleccionar un electrodoméstico. "id" lo identifica. -->
+						<option value="Cardadoras">Cardadoras</option>
+						<!-- Opción del selector. "value" define el valor que se envía al seleccionar esta opción. -->
+						<option value="Hilanderas">Hiladeras</option>
+						<option value="Bobinadoras">Bobinadoras</option>
+						<option value="Telares">Telares</option>
+						<option value="MaquinaTricotar">Maquina de tricotar</option>
+						<option value="TejidoRectilinasCirculares">Maquinas rectilinas o circulares</option>
+						<option value="Estampado">Maquina de estampado</option>
+						<option value="Tintura">Maquina de tintura</option>
+						<option value="Planchado ">Maquina de planchado</option>
+						<option value="Corte">Maquina de corte</option>
+						<option value="Costura">Maquina de costura</option>
+						<option value="bordado">Maquina de bordado</option>
+						<!-- Más opciones disponibles para selección. -->
+					</select>
+		
+					<label for="cantidad">Cantidad:</label>
+					<!-- Etiqueta para el campo de entrada de cantidad. -->
+					<input type="number" id="cantidad" min="1" value="1">
+					<!-- Campo de entrada numérica. 
+					"type" especifica que solo se aceptan números. 
+					"id" lo identifica. 
+					"min" establece el valor mínimo permitido. 
+					"value" define el valor inicial. -->
+		
+					<label for="horas">Horas de uso diario:</label>
+					<input type="number" id="horas" min="0" value="0">
+					<!-- Campo de entrada para el número de horas. -->
+		
+					<label for="dias-semana">Días de uso semanal:</label>
+					<input type="number" id="dias-semana" min="1" max="7" value="7">
+					<!-- Campo de entrada para días. "max" establece el valor máximo permitido. -->
+		
+					<!-- <label for="costo-kwh">Costo por kWh (en tu factura):</label>
+					<input type="number" id="costo-kwh" min="0.01" step="0.01" value="0.50"> -->
+					<!-- Campo de entrada para el costo de electricidad. "step" define el incremento entre valores. -->
+		
+					<button id="agregar-electrodomestico">Agregar Máquina</button>
+					<!-- Botón que permite agregar un electrodoméstico al listado. 
+					"id" lo identifica. -->
+				</div>
+
+				<div class="formulario__imagen"></div>
+			</section>
+	
+			<section id="lista-consumo">
+				<!-- Sección para mostrar la lista de electrodomésticos agregados. -->
+	
+				<h2>Máquinas Agregadas</h2>
+				<!-- Encabezado para esta sección. -->
+	
+				<ul id="lista"></ul>
+				<!-- Lista desordenada que contendrá los electrodomésticos agregados. 
+				"id" la identifica. -->
+			</section>
+
+			<section id="ConsumoPaneles">
+				<h2>Estimación de Paneles Solares</h2>
+				
+				<label for="Eficiencia">Eficiencia del panel (en watts):</label>
+				<input type="number" id="Eficiencia" min="1" value="690">
+				<small>La eficiencia varía según la marca y el modelo. Un panel de buena calidad puede tener hasta 690 watts.</small>
+				
+				<label for="Npaneles">Número de paneles:</label>
+				<input type="number" id="Npaneles" min="1" value="1">
+				<small>Introduce el número de paneles solares que deseas estimar para tu sistema.</small>
+			
+				<label for="HorasSol">Horas de sol diarias:</label>
+				<input type="number" id="HorasSol" min="1" value="5.5">
+				<small>La estimación de horas solares depende de la ubicación. En Medellín, se estima un promedio de 5.5 horas de sol directo al día.</small>
+			
+				<button id="CalculoPanales">Agregar Eficiencia</button>
+				<p id="EficiencaEnpaneles"></p>
+			</section>
+			
+			<section id="resultados">
+				<!-- Sección para mostrar los resultados del cálculo. -->
+	
+				<h2>Resultados</h2>
+				<!-- Encabezado para esta sección. -->
+	
+				<button id="generar-grafico">Generar Consumo Total</button>
+				<!-- Botón para generar gráficos del consumo total. -->
+	
+				<div id="totales"></div>
+				<!-- Contenedor para mostrar resultados textuales. -->
+	
+				<canvas id="graficoConsumo"></canvas>
+				<!-- Elemento para renderizar un gráfico circular. "id" lo identifica. -->
+	
+				<canvas id="graficoBarras"></canvas>
+				<!-- Elemento para renderizar un gráfico de barras. -->
+			</section>
+
+		</section>
+	
+		
+
+		<section class="comentarios" id="ejemplo1">
+			<div class="comentarios__header">
+				<h2 class="comentarios__titulo">Sitios para gestionar adquisición o instalación</h2>
+				<p class="comentarios__subtitulo">Recomendandos en Colombia</p>
+			</div>
+
+
+			<div class="comentarios__slider" id="slider">
+				<div class="comentarios__review" >
+					
+					<div class="comentarios__contenedor-foto">
+						<img src="./img/celsia.jpg" class="comentarios__foto" alt="" />
+					</div>
+
+					<div class="comentarios__contenedor-textos">
+						
+						<p class="comentarios__texto">
+							Empresa que ofrece soluciones en energía solar y proyectos de sostenibilidad.
+						</p>
+
+						<a class="comentarios__autor" href="https://www.celsia.com/es/" target="_blank">Ver sitio</a>
+						
+						<p class="comentarios__empresa">Celsia</p>
+					</div>
+				</div>
+
+				<div class="comentarios__review">
+					<div class="comentarios__contenedor-foto">
+						<img src="./img/ecopetrol.png" class="comentarios__foto" alt="" />
+					</div>
+					<div class="comentarios__contenedor-textos">
+						<p class="comentarios__texto">
+							Promueve proyectos renovables en Colombia, como plantas solares y generación con biogás.
+						</p>
+
+						<a class="comentarios__autor" href="https://www.ecopetrol.com.co/wps/portal/" target="_blank">Ver sitio</a>
+
+						<p class="comentarios__empresa">Ecopetrol Energías Renovables</p>
+					</div>
+				</div>
+
+				<div class="comentarios__review">
+					<div class="comentarios__contenedor-foto">
+						<img src="./img/erco_energia.webp" class="comentarios__foto" alt="" />
+					</div>
+					<div class="comentarios__contenedor-textos">
+						<p class="comentarios__texto">
+							Especializados en instalación de sistemas solares y soluciones energéticas para hogares y empresas.
+						</p>
+
+						<a class="comentarios__autor" href="https://erco.energy/co" target="_blank">Ver sitio</a>
+
+						<p class="comentarios__empresa">Erco Energía</p>
+					</div>
+				</div>
+				<div class="comentarios__review">
+					<div class="comentarios__contenedor-foto">
+						<img src="./img/grenergy.jpeg" class="comentarios__foto" alt="" />
+					</div>
+					<div class="comentarios__contenedor-textos">
+						<p class="comentarios__texto">
+							Desarrolladores de proyectos solares y eólicos en Latinoamérica, incluyendo Colombia.
+						</p>
+						
+						<a class="comentarios__autor" href="https://grenergy.eu/en/countries/grenergy-colombia/" target="_blank">Ver sitio</a>
+
+						<p class="comentarios__empresa">Grenergy</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<h3 class="footer__titulo">Grupo7</h3>
+			<p class="footer__subtitulo">© Derechos reservados a Julian Bonolis, Juan Pablo García, y Zamir Flores. Todo lo creado en este proyecto fue desarrollado como parte del proyecto final del Bootcamp de Programación, nivel Explorador, Talentotech.</p>
+			
+			<div class="footer__redes">
+				<div class="social-login-icons">
+					<div class="socialcontainer">
+					<div class="social-icon-1">
+						<a href="https://x.com/?lang=es" target="_blank">
+							<svg
+								viewBox="0 0 512 512"
+								height="1.7em"
+								xmlns="http://www.w3.org/2000/svg"
+								class="svgIcontwit"
+								fill="white">
+								<path
+								d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+								></path>
+							</svg>
+						</a>
+					</div>
+					<div class="social-icon-1">
+						<a href="https://x.com/?lang=es" target="_blank">
+							<svg
+								viewBox="0 0 512 512"
+								height="1.7em"
+								xmlns="http://www.w3.org/2000/svg"
+								class="svgIcontwit"
+								fill="white">
+								<path
+								d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+								></path>
+							</svg>
+						</a>
+					</div>
+					</div>
+					<div class="socialcontainer">
+					<div class="social-icon-2">
+						<a href="https://www.instagram.com/" target="_blank">
+							<svg
+								fill="white"
+								class="svgIcon"
+								viewBox="0 0 448 512"
+								height="1.5em"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+								d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+								></path>
+							</svg>
+						</a>
+					</div>
+					<div class="social-icon-2">
+						<a href="https://www.instagram.com/" target="_blank">
+							<svg
+								fill="white"
+								class="svgIcon"
+								viewBox="0 0 448 512"
+								height="1.5em"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+								d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+								></path>
+							</svg>
+						</a>
+					</div>
+					</div>
+					<div class="socialcontainer">
+					<div class="social-icon-3">
+						<a href="https://www.facebook.com/" target="_blank">
+							<svg
+								viewBox="0 0 384 512"
+								fill="white"
+								height="1.6em"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+								></path>
+							</svg>
+						</a>
+					</div>
+					<div class="social-icon-3">
+						<a href="https://www.facebook.com/" target="_blank">
+							<svg
+								viewBox="0 0 384 512"
+								fill="white"
+								height="1.6em"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+								></path>
+							</svg>
+						</a>
+					</div>
+					</div>
+					<div class="socialcontainer">
+					<div class="social-icon-4">
+						<a href="https://github.com/Juan-Garcia16/Proyecto-Transicion-energetica.git" target="_blank">
+							<svg fill="white" viewBox="0 0 496 512" height="1.6em">
+								<path
+									d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+								></path>
+							</svg>
+						</a>
+					</div>
+					<div class="social-icon-4">
+						<a href="https://github.com/Juan-Garcia16/Proyecto-Transicion-energetica.git" target="_blank">
+							<svg fill="white" viewBox="0 0 496 512" height="1.6em">
+								<path
+									d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+								></path>
+							</svg>
+						</a>
+					</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div id="cookies">
+			<div class="inner">
+				Esta web utiliza cookies como datos estad&iacute;sticos de su navegaci&oacute;n.
+				Si contin&uacute;a navegando consideramos que acepta el uso de cookies.
+				<a class="ok">
+					<b>OK</b>
+				</a> |
+				<a href="politica-cookies.html" target="_blank" class="info">M&aacute;s informaci&oacute;n</a>
+			</div>
+		</div>
+
+		<a href="">
+			<button class="button__up">
+				<svg class="svgIcon" viewBox="0 0 384 512">
+					<path
+					d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+					></path>
+				</svg>
+			</button>
+		</a>
+
+		<a href="#nav__energias">
+            <button class="button__up">
+                <svg class="svgIcon" viewBox="0 0 384 512">
+                    <path
+                    d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+                    ></path>
+                </svg>
+            </button>
+        </a>
+
+	</body>
+</html>
